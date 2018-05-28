@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Bluetooth Connector</string>
+    <string name="btn_enable_bt">Accendi il Bluetooth</string>
+    <string name="btn_bt_off">Spegni il bluetooth</string>
+    <string name="btn_discover">CERCA</string>
+    <string name="btn_discover_off">Ferma ricerca dispositivi</string>
+    <string name="btn_connect">CONNETTI</string>
+    <string name="btn_debug">Invia dato</string>
+    <string name="ser_comm_not_supported">Comunicazione seriale non supportata</string>
+    <string name="connection_failed">Connessione non riuscita</string>
+    <string name="connected_device_name">Nome device connesso</string>
+    <string name="tv_manual_speed">Manual Speed</string>
+    <string name="default_value">0</string>
+    <string name="default_value_percentage">0 %</string>
+    <string name="stby_on">STBY ON</string>
+    <string name="stby_off">STBY OFF</string>
+    <string name="auto_on">AUTO ON</string>
+    <string name="auto_off">AUTO OFF</string>
+    <string name="thrust_on">THRUST ON</string>
+    <string name="thrust_off">THRUST OFF</string>
+    <string name="connection_error">Errore di connessione</string>
+</resources>

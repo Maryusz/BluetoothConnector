@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ControllerActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="9dp"
+        android:layout_marginBottom="24dp"
+        android:background="?android:attr/listDivider"
+        android:padding="3dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="67dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:maxHeight="40dp"
+        android:minHeight="39dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="1.0">
+
+        <ImageButton
+            android:id="@+id/btn_thrust_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/holo_green_light"
+            app:srcCompat="@drawable/left" />
+
+        <ToggleButton
+            android:id="@+id/toggleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ToggleButton"
+            android:textOff="@string/thrust_off"
+            android:textOn="@string/thrust_on"
+            android:textStyle="italic" />
+
+        <ImageButton
+            android:id="@+id/btn_thrust_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/holo_red_light"
+            app:srcCompat="@drawable/right" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="15dp"
+            tools:layout_editor_absoluteX="26dp"
+            tools:layout_editor_absoluteY="205dp">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="33dp"
+                android:layout_weight="1"
+                android:text="@string/tv_manual_speed"
+                android:textSize="24sp"
+                tools:layout_editor_absoluteX="35dp"
+                tools:layout_editor_absoluteY="226dp" />
+
+            <TextView
+                android:id="@+id/tv_manual_speed_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/default_value_percentage"
+                android:textSize="24sp"
+                tools:layout_editor_absoluteX="306dp"
+                tools:layout_editor_absoluteY="226dp" />
+        </LinearLayout>
+
+        <SeekBar
+            android:id="@+id/sb_manual_speed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="@integer/max_speed_percentage"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="273dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginLeft="9dp"
+        android:layout_marginRight="9dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="13dp"
+        android:gravity="top|center"
+        android:orientation="vertical"
+        android:padding="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_connected_device_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/connected_device_name"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="161dp"
+            tools:layout_editor_absoluteY="110dp" />
+
+        <ProgressBar
+            android:id="@+id/pb_connection"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:visibility="visible"
+            tools:layout_editor_absoluteX="348dp"
+            tools:layout_editor_absoluteY="16dp"
+            tools:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="3dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="3dp">
+
+            <ToggleButton
+                android:id="@+id/btn_stby"
+                android:layout_width="wrap_content"
+                android:layout_height="57dp"
+                android:layout_weight="1"
+                android:checked="true"
+                android:textOff="@string/stby_off"
+                android:textOn="@string/stby_on"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <TextView
+                android:id="@+id/tv_real_time_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/default_value"
+                android:textSize="24sp"
+                tools:layout_editor_absoluteX="256dp"
+                tools:layout_editor_absoluteY="69dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="3dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="3dp">
+
+            <ToggleButton
+                android:id="@+id/btn_auto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="false"
+                android:textOff="@string/auto_off"
+                android:textOn="@string/auto_on"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="88dp" />
+
+            <TextView
+                android:id="@+id/tv_last_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/default_value"
+                android:textSize="24sp"
+                android:visibility="invisible"
+                tools:layout_editor_absoluteX="256dp"
+                tools:layout_editor_absoluteY="135dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
