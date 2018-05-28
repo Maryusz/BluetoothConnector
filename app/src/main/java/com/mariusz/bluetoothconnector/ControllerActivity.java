@@ -53,28 +53,6 @@ public class ControllerActivity extends AppCompatActivity {
         bluetoothDevice = getIntent().getParcelableExtra("device");
         tv_connected_device_name.setText("Tentativo di connessione a " + bluetoothDevice.getName());
 
-        ProgressBar pb = new ProgressBar(ControllerActivity.this);
-        pb.setVisibility(View.VISIBLE);
-        pb.setIndeterminate(true);
-
-        pb_connection.setVisibility(View.VISIBLE);
-        AsyncTask<Void, Void, Boolean> asyncTask = new AsyncTask<Void, Void, Boolean>() {
-            @Override
-            protected Boolean doInBackground(Void... voids) {
-                while ((bluetoothService = tryToConnect()) == null) {
-                    try {
-                        Thread.sleep(1200);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                }
-                return null;
-            }
-        };
-
-        asyncTask.execute();
-        pb.setVisibility(View.GONE);
-
 
         btn_stby.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -154,6 +132,7 @@ public class ControllerActivity extends AppCompatActivity {
     };
 
     private BluetoothService tryToConnect(){
+        pb_connection.setVisibility(View.VISIBLE);
 
         bluetoothConnector = new BluetoothConnector(bluetoothDevice, messageHandler);
         bluetoothConnector.start();
