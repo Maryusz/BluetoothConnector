@@ -19,4 +19,5 @@
     <string name="thrust_on">THRUST ON</string>
     <string name="thrust_off">THRUST OFF</string>
     <string name="connection_error">Errore di connessione</string>
+    <string name="set_on_end_checkbox">Imposta valore in Real-Time</string>
 </resources>

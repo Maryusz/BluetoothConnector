@@ -48,7 +48,7 @@
             app:srcCompat="@drawable/left" />
 
         <ToggleButton
-            android:id="@+id/toggleButton"
+            android:id="@+id/tb_thrust"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -95,6 +95,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="33dp"
                 android:layout_weight="1"
+                android:gravity="center_horizontal"
                 android:text="@string/tv_manual_speed"
                 android:textSize="24sp"
                 tools:layout_editor_absoluteX="35dp"
@@ -105,6 +106,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:gravity="center_horizontal"
                 android:text="@string/default_value_percentage"
                 android:textSize="24sp"
                 tools:layout_editor_absoluteX="306dp"
@@ -118,6 +120,15 @@
             android:max="@integer/max_speed_percentage"
             tools:layout_editor_absoluteX="8dp"
             tools:layout_editor_absoluteY="273dp" />
+
+        <CheckBox
+            android:id="@+id/cb_set_on_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/set_on_end_checkbox"
+            android:textAllCaps="false" />
     </LinearLayout>
 
     <LinearLayout
@@ -184,6 +195,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:gravity="center_horizontal"
                 android:text="@string/default_value"
                 android:textSize="24sp"
                 tools:layout_editor_absoluteX="256dp"
@@ -215,6 +227,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:gravity="center_horizontal"
                 android:text="@string/default_value"
                 android:textSize="24sp"
                 android:visibility="invisible"
